@@ -4,46 +4,23 @@
       {
          "title": "mewtwo",
          "artist": "23 likes",
-         "url": "https://www.amazon.com/Taylor-Swift/dp/B0014I4KH6",
-         "image": "https://images-na.ssl-images-amazon.com/images/I/61McsadO1OL.jpg",
-         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
-         "price": 7.99,
+         "image": "https://github.com/humichen/ig_hw/blob/master/src/img/1_120122230539_1.jpg?raw=true",
+         "thumbnail_image": "https://github.com/humichen/ig_hw/blob/master/src/img/69273.jpg?raw=true",
          "description": "我家的貓實在是太可愛了"
       },
       {
          "title": "dogdog",
          "artist": "100 likes",
-         "url": "https://www.amazon.com/Fearless-Enhanced-Taylor-Swift/dp/B001EYGOEM",
-         "image": "https://images-na.ssl-images-amazon.com/images/I/51qmhXWZBxL.jpg",
-         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
-         "price": 10.66,
+         "image": "https://github.com/humichen/ig_hw/blob/master/src/img/gC5_247BfcUuchrTKpGoAc12-457CoXNDrQRdw60EXc.jpeg?raw=true",
+         "thumbnail_image": "https://github.com/humichen/ig_hw/blob/master/src/img/69274.jpg?raw=true",
          "description": "防疫在家我好閒～我好閒～"
       },
       {
          "title": "pikachu_love",
          "artist": "100000000 likes",
-         "url": "https://www.amazon.com/Speak-Now-Taylor-Swift/dp/B003WTE886",
-         "image": "https://images-na.ssl-images-amazon.com/images/I/51vlGuX7%2BFL.jpg",
-         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
-         "price": 12.49,
+         "image": "https://github.com/humichen/ig_hw/blob/master/src/img/600_phpJKBkHV.jpg?raw=true",
+         "thumbnail_image": "https://github.com/humichen/ig_hw/blob/master/src/img/69604%202.jpg?raw=true",
          "description": "皮卡丘大遊行！！我來了～"
-      },
-      {
-         "title": "Red",
-         "artist": "Taylor Swift",
-         "url": "https://www.amazon.com/Red-Taylor-Swift/dp/B008XNZMOU",
-         "image": "https://images-na.ssl-images-amazon.com/images/I/41j7-7yboXL.jpg",
-         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
-         "price": 12.49,
-         "description": "2010 release, the third album from the Country/Pop superstar. Speak Now is the follow-up to her multi-million-selling 2008 album, Fearless. The 21-year-old singer/songwriter wrote the entire album on her own and co-produced with longtime collaborator Nathan Chapman, who worked with her on Fearless and her 2006 self-titled debut. Features the single 'Mine'."
-      },
-      {
-         "title": "1989",
-         "artist": "Taylor Swift",
-         "url": "https://www.amazon.com/1989-Taylor-Swift/dp/B00MRHANNI",
-         "image": "https://images-na.ssl-images-amazon.com/images/I/717DWgRftmL._SX522_.jpg",
-         "thumbnail_image": "https://i.imgur.com/K3KJ3w4h.jpg",
-         "price": 11.49,
-         "description": "Physical Album with 13 Songs"
       }
+      
 ]}

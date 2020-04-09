@@ -1,0 +1,30 @@
+{
+    "albumTitle": "Direct",
+    "albumList": [
+       {
+          "title": "Fang_1129",
+          "thumbnail_image": "https://github.com/humichen/ig_hw/blob/master/src/img/69474%202.jpg?raw=true",
+          "description": "在１則現時動態提及你.３小時前"
+       },
+       {
+          "title": "mewmewmew",
+          "thumbnail_image": "https://github.com/humichen/ig_hw/blob/master/src/img/69474%203.jpg?raw=true",
+          "description": "７小時前上線"
+       },
+       {
+          "title": "Neko_chen",
+          "thumbnail_image": "https://github.com/humichen/ig_hw/blob/master/src/img/69474%204.jpg?raw=true",
+          "description": "１天前上線"
+       },
+       {
+         "title": "poppoppop",
+         "thumbnail_image": "https://github.com/humichen/ig_hw/blob/master/src/img/69474%205.jpg?raw=true",
+         "description": "１星期前上線"
+      },
+      {
+         "title": "pikachu_love",
+         "thumbnail_image": "https://github.com/humichen/ig_hw/blob/master/src/img/69604%202.jpg?raw=true",
+         "description": "３分鐘前上線"
+      }
+       
+ ]}

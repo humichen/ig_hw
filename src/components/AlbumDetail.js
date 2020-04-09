@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity, Linking} from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity, Linking } from "react-native";
 
-const AlbumDetail = ({ album, navigation }) => {
-   return (
-      <View style={styles.cardContainerStyle}>
-        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+const AlbumDetail = ({album}) => {
+  return (
+    <View style={styles.cardContainerStyle}>
+      <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+        <View style={[styles.thumbnailContainerStyle2, styles.cardSectionStyle]}>
           <Image
             style={styles.thumbnailStyle}
             source={{
@@ -12,34 +13,82 @@ const AlbumDetail = ({ album, navigation }) => {
             }}
           />
           <View style={styles.headerContentStyle}>
-            <Text>{album.title}</Text>
-            <Text>{album.artist}</Text>
+            <Text style={styles.titleStyle}>{album.title}</Text>
           </View>
         </View>
-        <View style={styles.cardSectionStyle}>
-          <TouchableOpacity 
-            onPress={() => navigation.navigate('Detail', album)}
-          >
+        <Image
+          style={styles.iconStyle2}
+          source={{
+            uri: "https://github.com/humichen/ig_hw/blob/master/src/img/icons8-menu-vertical-32.png?raw=true"
+          }}
+        />
+      </View>
+      <View style={styles.cardSectionStyle}>
+
+        <Image
+          style={styles.imageStyle}
+          source={{
+            uri: album.image
+          }}
+        />
+      </View>
+      <View style={[styles.cardSectionStyle, styles.bottomlayoutStyle]}>
+        <View style={styles.iconlayout2Style}>
+          <View style={styles.iconlayoutStyle}>
             <Image
-              style={styles.imageStyle}
+              style={styles.iconStyle}
               source={{
-                uri: album.image
+                uri: "https://github.com/humichen/ig_hw/blob/master/src/img/b5228eb4316921ff5639755998e5b990_instagram-icons-1652-free-vector-icons_600-564%203.png?raw=true"
               }}
             />
-          </TouchableOpacity>
-        </View>   
+            <Image
+              style={styles.iconStyle}
+              source={{
+                uri: "https://github.com/humichen/ig_hw/blob/master/src/img/b5228eb4316921ff5639755998e5b990_instagram-icons-1652-free-vector-icons_600-564%202.png?raw=true"
+              }}
+            />
+            <Image
+              style={styles.iconStyle}
+              source={{
+                uri: "https://github.com/humichen/ig_hw/blob/master/src/img/b5228eb4316921ff5639755998e5b990_instagram-icons-1652-free-vector-icons_600-564.png?raw=true"
+              }}
+            />
+          </View>
+          <View>
+            <Image
+              style={styles.iconStyle2}
+              source={{
+                uri: "https://github.com/humichen/ig_hw/blob/master/src/img/b5228eb4316921ff5639755998e5b990_instagram-icons-1652-free-vector-icons_600-564%204.png?raw=true"
+              }}
+            />
+          </View>
+        </View>
+
+        <Text style={[styles.textstrong, styles.likeStyle]}>{album.artist}</Text>
+        <View style={styles.wordStyle}>
+          <Text style={styles.textstrong}>{album.title} </Text>
+          <Text>{album.description}</Text>
+        </View>
+
       </View>
-  )};
+    </View>
+  )
+};
 
 const styles = StyleSheet.create({
   thumbnailContainerStyle: {
     flexDirection: "row",
-    justifyContent: "flex-start"
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 15,
+  },
+  thumbnailContainerStyle2: {
+    flexDirection: "row",
+    justifyContent: "flex-start",
   },
   thumbnailStyle: {
     height: 50,
-    width: 50,
-    margin: 5
+    width: 50
   },
   headerContentStyle: {
     flexDirection: "column",
@@ -47,27 +96,52 @@ const styles = StyleSheet.create({
     paddingLeft: 10
   },
   cardContainerStyle: {
-    borderWidth: 1,
-    borderRadius: 2,
-    borderColor: "#ddd",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10
+    backgroundColor:"#fff"
   },
   cardSectionStyle: {
-    padding: 5,
+    // padding: 5,
     backgroundColor: "#fff",
-    borderColor: "#ddd",
-    borderBottomWidth: 1
+    // borderColor: "#ddd",
+    // borderBottomWidth: 1
   },
   imageStyle: {
     height: 300,
     width: null
+  },
+  textstrong: {
+    fontWeight: "bold",
+  },
+  wordStyle: {
+    flexDirection: "row",
+    justifyContent: "flex-start"
+  },
+  iconStyle: {
+    height: 32,
+    width: 32,
+    marginRight: 10
+  },
+  iconStyle2: {
+    height: 32,
+    width: 32,
+  },
+  iconlayoutStyle: {
+    flexDirection: "row",
+    justifyContent: "flex-start"
+  },
+  iconlayout2Style: {
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+  bottomlayoutStyle: {
+    padding: 15,
+  },
+  likeStyle: {
+    fontSize: 16,
+    marginTop: 5
+  },
+  titleStyle: {
+    fontSize: 16,
+    fontWeight: "bold"
   }
 });
 
