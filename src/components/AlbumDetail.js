@@ -1,106 +1,77 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, TouchableOpacity, Linking } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity, Linking, Button,TouchableHighlight} from "react-native";
+import { ProgressBar, Colors } from 'react-native-paper';
 
-const AlbumDetail = ({album}) => {
-  return (
-    <View style={styles.cardContainerStyle}>
-      <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
-        <View style={[styles.thumbnailContainerStyle2, styles.cardSectionStyle]}>
-          <Image
+const AlbumDetail = ({ album, navigation }) => {
+   return (
+      <View style={styles.cardContainerStyle}>
+        <View style={styles.cardSectionStyle}>
+          <TouchableOpacity 
+            onPress={() => {}} style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]} underlayColor={"#f0f0f0"} activeOpacity={0.6}
+          >
+            <View style={styles.thumbnailborderStyle}>
+               <Image
             style={styles.thumbnailStyle}
             source={{
               uri: album.thumbnail_image
             }}
           />
+            </View>
+           
           <View style={styles.headerContentStyle}>
             <Text style={styles.titleStyle}>{album.title}</Text>
+            <Text style={styles.artistStyle}>{album.artist}</Text>
+            <Text style={styles.wordStyle}>{album.description}</Text>
+            <ProgressBar progress={album.width} style={styles.lineStyle} color={'#70b4a1'}/>
+            <TouchableHighlight onPress={() =>{} }underlayColor={album.statusunderlayColor} style={{marginTop:album.statusmarginTop,width:album.statuswidth,height:album.statusheight,borderRadius:3,justifyContent:"center"}}>
+              <Text style={{color:album.statuscolor,fontWeight:album.statusweight,fontSize:12}}>{album.status}</Text>
+            </TouchableHighlight>
+            {/* <Text style={styles.statusStyle}>{album.status}</Text>
+            <Image
+              style={styles.statusimgStyle}
+              source={{
+                uri:album.statusimg
+              }}
+            /> */}
           </View>
-        </View>
-        <Image
-          style={styles.iconStyle2}
-          source={{
-            uri: "https://github.com/humichen/ig_hw/blob/master/src/img/icons8-menu-vertical-32.png?raw=true"
-          }}
-        />
+          </TouchableOpacity>
+        </View>   
       </View>
-      <View style={styles.cardSectionStyle}>
-
-        <Image
-          style={styles.imageStyle}
-          source={{
-            uri: album.image
-          }}
-        />
-      </View>
-      <View style={[styles.cardSectionStyle, styles.bottomlayoutStyle]}>
-        <View style={styles.iconlayout2Style}>
-          <View style={styles.iconlayoutStyle}>
-            <Image
-              style={styles.iconStyle}
-              source={{
-                uri: "https://github.com/humichen/ig_hw/blob/master/src/img/b5228eb4316921ff5639755998e5b990_instagram-icons-1652-free-vector-icons_600-564%203.png?raw=true"
-              }}
-            />
-            <Image
-              style={styles.iconStyle}
-              source={{
-                uri: "https://github.com/humichen/ig_hw/blob/master/src/img/b5228eb4316921ff5639755998e5b990_instagram-icons-1652-free-vector-icons_600-564%202.png?raw=true"
-              }}
-            />
-            <Image
-              style={styles.iconStyle}
-              source={{
-                uri: "https://github.com/humichen/ig_hw/blob/master/src/img/b5228eb4316921ff5639755998e5b990_instagram-icons-1652-free-vector-icons_600-564.png?raw=true"
-              }}
-            />
-          </View>
-          <View>
-            <Image
-              style={styles.iconStyle2}
-              source={{
-                uri: "https://github.com/humichen/ig_hw/blob/master/src/img/b5228eb4316921ff5639755998e5b990_instagram-icons-1652-free-vector-icons_600-564%204.png?raw=true"
-              }}
-            />
-          </View>
-        </View>
-
-        <Text style={[styles.textstrong, styles.likeStyle]}>{album.artist}</Text>
-        <View style={styles.wordStyle}>
-          <Text style={styles.textstrong}>{album.title} </Text>
-          <Text>{album.description}</Text>
-        </View>
-
-      </View>
-    </View>
-  )
-};
+  )};
 
 const styles = StyleSheet.create({
   thumbnailContainerStyle: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: 15,
-  },
-  thumbnailContainerStyle2: {
-    flexDirection: "row",
-    justifyContent: "flex-start",
+    justifyContent: "flex-start"
   },
   thumbnailStyle: {
-    height: 50,
-    width: 50
+    height: 140,
+    width: 93,
+  },
+  thumbnailborderStyle:{
+    height: 146,
+    width: 99,
+    padding:3,
+    borderWidth:0.5,
+    borderColor:"#d1d1d1",
+    shadowColor:"#40000000",
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 0.1,
   },
   headerContentStyle: {
     flexDirection: "column",
-    justifyContent: "space-around",
-    paddingLeft: 10
+    paddingLeft: 24
   },
   cardContainerStyle: {
+    borderColor: "#ddd",
+    borderBottomWidth: 1,
     backgroundColor:"#fff"
   },
   cardSectionStyle: {
-    // padding: 5,
-    backgroundColor: "#fff",
+    paddingTop: 12,
+    paddingBottom: 12,
+    paddingLeft: 15,
+    backgroundColor: "#f8f8f8",
     // borderColor: "#ddd",
     // borderBottomWidth: 1
   },
@@ -108,40 +79,46 @@ const styles = StyleSheet.create({
     height: 300,
     width: null
   },
-  textstrong: {
-    fontWeight: "bold",
+  wordStyle:{
+    width:194,
+    height:30,
+    fontSize:12,
+    color:"#b1b1b1",
+    marginTop:11,
   },
-  wordStyle: {
-    flexDirection: "row",
-    justifyContent: "flex-start"
+  titleStyle:{
+    width:200,
+    height:22,
+    fontSize:18,
+    color:"#2e2e2e",
+    fontWeight:"600",
+    marginTop:16,
   },
-  iconStyle: {
-    height: 32,
-    width: 32,
-    marginRight: 10
+  artistStyle:{
+    width:194,
+    height:18,
+    fontSize:14,
+    color:"#717171",
+    marginTop:11
   },
-  iconStyle2: {
-    height: 32,
-    width: 32,
+  lineStyle:{
+    backgroundColor:"#c3c3c3",
+    width:194,
+    height:3,
+    marginTop:10,
+    borderRadius:1.5
   },
-  iconlayoutStyle: {
-    flexDirection: "row",
-    justifyContent: "flex-start"
+  statusStyle:{
+    marginTop:9,
+    color:"#b1b1b1",
+    fontSize:12,
+    width:178,
+    height:16
   },
-  iconlayout2Style: {
-    flexDirection: "row",
-    justifyContent: "space-between"
-  },
-  bottomlayoutStyle: {
-    padding: 15,
-  },
-  likeStyle: {
-    fontSize: 16,
-    marginTop: 5
-  },
-  titleStyle: {
-    fontSize: 16,
-    fontWeight: "bold"
+  statusimgStyle:{
+    marginTop:6,
+    width:82,
+    height:21
   }
 });
 

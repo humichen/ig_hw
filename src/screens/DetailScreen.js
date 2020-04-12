@@ -1,152 +1,151 @@
 import React from "react";
-import { StyleSheet, ScrollView, View } from 'react-native';
-import { Text, Image } from 'react-native-elements';
-import friendsData from "../json/friends.json";
-import FriendsDetail from "../components/FriendsDetail.js";
+import { StyleSheet, View, Image } from 'react-native';
+import { Button, Card, Text, PricingCard, Tile } from 'react-native-elements';
+
 
 
 const DetailScreen = () => {
   return (
-    <ScrollView style={styles.ScrollViewStyle}>
-      <View style={styles.thumbnailContainerStyle}>
-        <View style={styles.cardSectionStyle}>
-          <Image
-            style={styles.thumbnailStyle}
-            source={{
-              uri: "https://github.com/humichen/ig_hw/blob/master/src/img/69474%202.jpg?raw=true"
-            }}
-          />
-          <View style={styles.headerContentStyle}>
-            <Text style={styles.texttitleStyle}>Fang_1129</Text>
-            <Text style={styles.textwordStyle}>在１則現時動態提及你.３小時前</Text>
-          </View>
-        </View>
+    <View style={styles.layout}>
+      <View style={styles.headerStyle}>
         <Image
-          style={styles.iconStyle}
+          style={styles.userimg}
           source={{
-            uri: "https://github.com/humichen/ig_hw/blob/master/src/img/382b083cd554a83dd48ff2d3a4d83748%202.png?raw=true"
+            uri: "https://github.com/humichen/app_hw4/blob/master/src/img/img_user_photo.png?raw=true"
           }}
         />
-      </View>
-      <View style={styles.thumbnailContainerStyle}>
-        <View style={styles.cardSectionStyle}>
+        <View style={styles.userinfowitharrowlayout}>
+          <View style={styles.userinfolayout}>
+            <Text style={styles.userinfo}>GamexHCI</Text>
+            <Text style={styles.userinfo}>gdlab2017@gmail.com</Text>
+          </View>
           <Image
-            style={styles.thumbnailStyle}
+            style={styles.userarrow}
             source={{
-              uri: "https://github.com/humichen/ig_hw/blob/master/src/img/69474%203.jpg?raw=true"
+              uri: "https://github.com/humichen/app_hw4/blob/master/src/img/btn_down_arrow.png?raw=true"
             }}
           />
-          <View style={styles.headerContentStyle}>
-            <Text style={styles.texttitleStyle}>mewmewmew</Text>
-            <Text style={styles.textwordStyle}>７小時前上線</Text>
+        </View>
+      </View>
+      <View style={styles.menulayout}>
+        <View style={styles.menu}>
+          <View style={styles.menubox}>
+            <Image
+              style={styles.menuimg}
+              source={{
+                uri: "https://github.com/humichen/app_hw4/blob/master/src/img/icon_drawer_home.png?raw=true"
+              }}
+            />
+            <Text style={styles.menutext}>Home</Text>
+          </View>
+          <View style={styles.menubox}>
+            <Image
+              style={styles.menuimg}
+              source={{
+                uri: "https://github.com/humichen/app_hw4/blob/master/src/img/icon_drawer_mybook.png?raw=true"
+              }}
+            />
+            <Text style={styles.menutext}>My Book</Text>
+          </View>
+          <View style={styles.menubox}>
+            <Image
+              style={styles.menuimg}
+              source={{
+                uri: "https://github.com/humichen/app_hw4/blob/master/src/img/icon_drawer_favorites.png?raw=true"
+              }}
+            />
+            <Text style={styles.menutext}>Favorites</Text>
+          </View>
+          <View style={styles.menubox}>
+            <Image
+              style={styles.menuimg}
+              source={{
+                uri: "https://github.com/humichen/app_hw4/blob/master/src/img/icon_drawer_setting.png?raw=true"
+              }}
+            />
+            <Text style={styles.menutext}>Settings</Text>
+          </View>
+          <View style={styles.menubox}>
+            <Image
+              style={styles.menuimg}
+              source={{
+                uri: "https://github.com/humichen/app_hw4/blob/master/src/img/icon_drawer_aboutus.png?raw=true"
+              }}
+            />
+            <Text style={styles.menutext}>About us</Text>
           </View>
         </View>
-        <Image
-          style={styles.iconStyle}
-          source={{
-            uri: "https://github.com/humichen/ig_hw/blob/master/src/img/382b083cd554a83dd48ff2d3a4d83748%202.png?raw=true"
-          }}
-        />
       </View>
-      <View style={styles.thumbnailContainerStyle}>
-        <View style={styles.cardSectionStyle}>
-          <Image
-            style={styles.thumbnailStyle}
-            source={{
-              uri: "https://github.com/humichen/ig_hw/blob/master/src/img/69474%204.jpg?raw=true"
-            }}
-          />
-          <View style={styles.headerContentStyle}>
-            <Text style={styles.texttitleStyle}>Neko_chen</Text>
-            <Text style={styles.textwordStyle}>１天前上線</Text>
-          </View>
-        </View>
-        <Image
-          style={styles.iconStyle}
-          source={{
-            uri: "https://github.com/humichen/ig_hw/blob/master/src/img/382b083cd554a83dd48ff2d3a4d83748%202.png?raw=true"
-          }}
-        />
-      </View>
-      <View style={styles.thumbnailContainerStyle}>
-        <View style={styles.cardSectionStyle}>
-          <Image
-            style={styles.thumbnailStyle}
-            source={{
-              uri: "https://github.com/humichen/ig_hw/blob/master/src/img/69474%205.jpg?raw=true"
-            }}
-          />
-          <View style={styles.headerContentStyle}>
-            <Text style={styles.texttitleStyle}>poppoppop</Text>
-            <Text style={styles.textwordStyle}>１星期前上線</Text>
-          </View>
-        </View>
-        <Image
-          style={styles.iconStyle}
-          source={{
-            uri: "https://github.com/humichen/ig_hw/blob/master/src/img/382b083cd554a83dd48ff2d3a4d83748%202.png?raw=true"
-          }}
-        />
-      </View>
-
-    </ScrollView>
-  )
-};
-
+    </View>
+  );
+}
 const styles = StyleSheet.create({
-  ScrollViewStyle:{
-    backgroundColor: "#fff",
+  layout:{
+    // backgroundColor:"rgba(184,184,184,0.5)"
   },
-  thumbnailContainerStyle: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: "#fff",
+  headerStyle: {
+    width: 304,
+    height: 168,
+    backgroundColor: "#00b49f",
+    shadowColor:"#000",
+    shadowOffset:{width: 56, height: 0},
+    shadowOpacity:0.1
   },
-  thumbnailStyle: {
-    height: 70,
+  userimg: {
     width: 70,
+    height: 70,
+    marginTop: 37,
+    marginLeft: 13
   },
-  headerContentStyle: {
-    flexDirection: "column",
-    justifyContent: "space-around",
-    paddingLeft: 10
-  },
-  cardContainerStyle: {
-    borderWidth: 1,
-    borderRadius: 2,
-    borderColor: "#ddd",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10
-  },
-  cardSectionStyle: {
-    padding: 20,
-    // backgroundColor: "#fff",
+  userinfowitharrowlayout: {
     flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "center"
+    alignItems: "center",
+    marginTop: 10,
   },
-  imageStyle: {
-    height: 300,
-    width: null
+  userinfo: {
+    width: 230,
+    height: 15,
+    fontSize: 14,
+    color: "#fff",
+    fontWeight: "600",
+    marginBottom: 5,
+    marginLeft: 16
   },
-  iconStyle: {
-    height: 32,
-    width: 32,
-    marginRight: 15
+  userarrow: {
+    width: 24,
+    height: 24,
+    marginLeft: 18
   },
-  texttitleStyle:{
+  menulayout: {
+    width: 304,
+    height: 640,
+    backgroundColor: "#ebebeb",
+    shadowColor:"#000",
+    shadowOffset:{width: 56, height: 0},
+    shadowOpacity:0.1
+  },
+  menu:{
+    marginTop:8
+  },
+  menubox: {
+    flexDirection: "row",
+    height: 56,
+    width: 304,
+    alignItems: "center",
+    // backgroundColor:"#000"
+  },
+  menuimg: {
+    width: 24,
+    height: 24,
+    marginLeft:24
+  },
+  menutext:{
+    marginLeft:32,
+    width:176,
+    height:18,
+    fontSize:14,
     fontWeight:"600",
-    fontSize:18
-  },
-  textwordStyle:{
-    color:"#636363"
+    color:"#5c5c5c"
   }
 });
 
